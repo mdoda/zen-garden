@@ -1,16 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Creepster");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-h1,
+h1 {
+  font-family: "Creepster";
+  color: #cd8c42;
+  font-size: 2em;
+  text-align: center;
+}
+
 h2,
 h3,
 h4 {
   font-family: "Creepster";
-  color: #fff;
+  color: #cd8c42;
+  font-size: 2em;
 }
 
 p {
   font-family: "Special Elite";
   color: #fff;
+  font-size: 1em;
 }
 
 /*

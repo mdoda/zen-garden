@@ -1,15 +1,20 @@
 @use 'variables' as *;
 // mixins to take care of repeated patterns.
-@mixin set-font($font, $text-color: $text-light) {
+@mixin set-font($font, $size: 1em, $text-color: $text-light) {
     font-family: $font;
     color: $text-color;
+    font-size: $size;
 }
 
-h1,
+h1{
+  @include set-font($fonts-headline, $size, $accent1);
+  text-align: center;
+}
+
 h2,
 h3,
 h4 {
-    @include set-font($fonts-headline);
+    @include set-font($fonts-headline, $size, $accent1);
 }
 
 p {
