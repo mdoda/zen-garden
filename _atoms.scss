@@ -7,7 +7,7 @@
 }
 
 h1{
-  @include set-font($fonts-headline, $size, $accent2);
+  @include set-font($fonts-headline, 3em, $accent2);
   text-align: center;
 }
 
