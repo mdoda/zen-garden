@@ -21,6 +21,14 @@ p {
     @include set-font($fonts-body)
 }
 
+body {
+    height: 25%;
+    background-image: url("images/kraken.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /*
 @mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {

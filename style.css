@@ -21,6 +21,14 @@ p {
   font-size: 1em;
 }
 
+body {
+  height: 25%;
+  background-image: url("images/kraken.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*
 @mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
   font-family: $font;
@@ -99,6 +107,10 @@ a:hover {
     border-color: $accent1;
 }
 */
+div.page-wrapper div {
+  background: rgba(128, 128, 128, 0.5);
+}
+
 /*[role="banner"] {
   > h1 {
     // notice we have to reference the 'atoms' namespace to find our mixins.
@@ -124,22 +136,76 @@ a:hover {
 /*.intro {
   padding: 5%;
 }*/
-* {
-  box-sizing: border-box;
+/** {
+    box-sizing: border-box;
 }
 
 html {
-  background-color: #151818;
-  padding: 5%;
+    background-color: $background-color;
+    padding: 5%;
 }
 
 body {
-  font-family: "Special Elite";
-  font-size: 85%;
-  color: #333;
-  background-color: #313131;
-  margin: 0;
-  padding: 1em;
+    font-family: $fonts-body;
+    font-size: 85%;
+    color: $text-dark;
+    background-color: $primary;
+    margin: 0;
+    padding: 1em;
 }
+
+section {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+}
+
+.colors {
+    @include atoms.set-flex();
+    >h3 {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+    >figure {
+        margin: 0;
+        flex: 1 1 25%;
+    }
+}
+
+.swatch {
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.accent1 {
+    background-color: $accent1;
+}
+
+.accent2 {
+    background-color: $accent2;
+}
+
+.text-dark {
+    background-color: $text-dark;
+}
+
+.element {
+    border: 1px solid;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.uppercase {
+    @include atoms.uppercase;
+}
+
+.uppercase-light {
+    @include atoms.uppercase($text-light);
+}*/
 
 /*# sourceMappingURL=style.css.map */
