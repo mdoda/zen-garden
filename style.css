@@ -1,17 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Creepster");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-h1 {
-  font-family: "Creepster";
-  color: #6E3A9E;
-  font-size: 3em;
-  text-align: center;
-}
-
-h2,
+/*$accent1: #cd8c42;
+$accent2: #6E3A9E;
+rgb(138,
+100,
+121);*/
 h3,
 h4 {
   font-family: "Creepster";
-  color: #cd8c42;
+  color: rgb(25, 138, 131);
   font-size: 2em;
 }
 
@@ -22,11 +19,52 @@ p {
 }
 
 body {
-  height: 25%;
-  background-image: url("images/kraken.jpeg");
+  height: 100vh;
+  /* The image used */
+  background-image: url("./images/kraken.jpeg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.intro {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33.3% 66.3%;
+}
+
+header {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50% 50%;
+  grid-column: 1;
+  grid-row: 1 2;
+}
+
+h1 {
+  font-family: "Creepster";
+  color: rgb(251, 152, 1);
+  font-size: 3em;
+  grid-column: 1;
+}
+
+h2 {
+  font-family: "Creepster";
+  color: rgb(138, 100, 121);
+  font-size: 2em;
+  grid-column: 2;
+}
+
+.summary {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.preamble {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 /*

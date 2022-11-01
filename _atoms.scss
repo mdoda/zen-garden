@@ -6,12 +6,6 @@
     font-size: $size;
 }
 
-h1{
-  @include set-font($fonts-headline, 3em, $accent2);
-  text-align: center;
-}
-
-h2,
 h3,
 h4 {
     @include set-font($fonts-headline, $size, $accent1);
@@ -22,11 +16,52 @@ p {
 }
 
 body {
-    height: 25%;
-    background-image: url("images/kraken.jpeg");
+    height: 100vh;
+    /* The image used */
+    background-image: url("./images/kraken.jpeg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.intro {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 33.3% 66.3%;
+}
+
+header {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-column: 1;
+    grid-row: 1 2;
+}
+
+h1 {
+    @include set-font($fonts-headline,
+    3em,
+    $accent2);
+    grid-column: 1;
+}
+
+h2 {
+    @include set-font($fonts-headline,
+    $size,
+    $accent3);
+    grid-column: 2;
+}
+
+.summary {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.preamble {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 
