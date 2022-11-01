@@ -6,6 +6,9 @@
     font-size: $size;
 }
 
+html{
+  padding:0%;
+}
 h1{
   @include set-font($fonts-headline, 3em, $accent2);
   text-align: center;
@@ -21,12 +24,109 @@ p {
     @include set-font($fonts-body)
 }
 
+
 body {
     height: 25%;
     background-image: url("images/kraken.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: thunderHit;
+    animation-duration: 0.4s;
+    animation-iteration-count: 2;
+    animation-delay: 0.8s;
+   
+}
+
+.page-wrapper{
+
+  background-image: url(https://i.postimg.cc/XvR6CjbY/rain.png);
+  animation: rain 0.3s linear infinite;
+}
+
+@keyframes rain {
+  0%{
+      background-position: 0% 0%;
+  }
+  100%{
+      background-position: 20% 100%;
+  }
+}
+
+.page-wrapper::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://i.postimg.cc/xCLDGwfy/lightining.png);
+  top: -100px;
+  transform: rotate(180deg);
+  animation: lightining 4s linear infinite;
+  opacity: 1;
+
+}
+
+@keyframes lightining {
+  0%{
+      opacity: 0;
+  }
+  20%{
+      opacity: 0;
+  }
+  21%{
+      opacity: 1;
+  }
+  25%{
+      opacity: 0;
+  }
+  30%{
+      opacity: 0;
+  }
+  31%{
+      opacity: 1;
+  }
+  35%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+@keyframes thunderHit {
+  0%{
+    background: white;
+    background-position: center;
+    opacity: 1;
+  }
+  25%{
+    background: url("images/kraken.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  50%{
+    background: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+  75%{
+    background: url("images/kraken.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  100%{
+    background: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+  
 }
 
 
