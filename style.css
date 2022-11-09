@@ -1,21 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Creepster");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+/*$accent1: #cd8c42;
+$accent2: #6E3A9E;
+rgb(138,
+100,
+121);*/
 html {
   padding: 0%;
-}
-
-h1 {
-  font-family: "Creepster";
-  color: #6E3A9E;
-  font-size: 3em;
-  text-align: center;
 }
 
 h2,
 h3,
 h4 {
   font-family: "Creepster";
-  color: #cd8c42;
+  color: rgb(25, 138, 131);
   font-size: 2em;
 }
 
@@ -26,8 +24,11 @@ p {
 }
 
 body {
-  height: 25%;
-  background-image: url("images/kraken.jpeg");
+  height: 100vh;
+  /* The image used */
+  background-image: url("./images/kraken.jpeg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,6 +122,89 @@ body {
     opacity: 1;
   }
 }
+/*Main wrapper*/
+.page-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+/*Intro*/
+.intro {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 350px));
+  grid-row: 1;
+  grid-column: 1/13;
+}
+
+header {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+h1 {
+  font-family: "Creepster";
+  color: rgb(251, 152, 1);
+  font-size: 3em;
+  grid-column: 1/6;
+}
+
+h2 {
+  font-family: "Creepster";
+  color: rgb(138, 100, 121);
+  font-size: 2em;
+  grid-column: 6/13;
+}
+
+.summary {
+  grid-column: 4/13;
+  grid-row: 1;
+}
+
+.preamble {
+  grid-column: 4/13;
+  grid-row: 2;
+}
+
+/*Main*/
+.main {
+  grid-column: 4/13;
+  grid-row: 3;
+}
+
+.sidebar {
+  grid-column: 1/4;
+  grid-row: 3;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, auto));
+}
+
+.design-selection {
+  grid-column: 1/6;
+  grid-row: 1;
+}
+
+.zen-resources {
+  grid-column: 6/13;
+  grid-row: 1;
+}
+
+.design-archives {
+  grid-column: 1/13;
+  grid-row: 2;
+}
+
 /*
 @mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
   font-family: $font;
@@ -199,8 +283,10 @@ a:hover {
     border-color: $accent1;
 }
 */
-div.page-wrapper div {
-  background: rgba(128, 128, 128, 0.5);
+.page-wrapper > section > div,
+.page-wrapper > div > div,
+aside > div > div {
+  background: rgba(128, 128, 128, 0.9);
 }
 
 /*[role="banner"] {
@@ -228,22 +314,76 @@ div.page-wrapper div {
 /*.intro {
   padding: 5%;
 }*/
-* {
-  box-sizing: border-box;
+/** {
+    box-sizing: border-box;
 }
 
 html {
-  background-color: #151818;
-  padding: 0%;
+    background-color: $background-color;
+    padding: 5%;
 }
 
 body {
-  font-family: "Special Elite";
-  font-size: 85%;
-  color: #333;
-  background-color: #313131;
-  margin: 0;
-  padding: 1em;
+    font-family: $fonts-body;
+    font-size: 85%;
+    color: $text-dark;
+    background-color: $primary;
+    margin: 0;
+    padding: 1em;
 }
+
+section {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+}
+
+.colors {
+    @include atoms.set-flex();
+    >h3 {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+    >figure {
+        margin: 0;
+        flex: 1 1 25%;
+    }
+}
+
+.swatch {
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.accent1 {
+    background-color: $accent1;
+}
+
+.accent2 {
+    background-color: $accent2;
+}
+
+.text-dark {
+    background-color: $text-dark;
+}
+
+.element {
+    border: 1px solid;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.uppercase {
+    @include atoms.uppercase;
+}
+
+.uppercase-light {
+    @include atoms.uppercase($text-light);
+}*/
 
 /*# sourceMappingURL=style.css.map */
