@@ -135,7 +135,7 @@ body {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 0.33fr));
+  grid-template-rows: repeat(2, minmax(0, 350px));
   grid-row: 1;
   grid-column: 1/13;
 }
@@ -187,7 +187,7 @@ h2 {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, minmax(0, auto));
 }
 
 .design-selection {
