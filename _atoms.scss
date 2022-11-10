@@ -149,7 +149,7 @@ header {
     grid-gap: 10px;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-column: 1/4;
-    grid-row: 1;
+    grid-row: 1/2;
 }
 
 h1 {
@@ -157,6 +157,7 @@ h1 {
     3em,
     $accent2);
     grid-column: 1/6;
+    grid-row: 1;
 }
 
 h2 {
@@ -164,6 +165,7 @@ h2 {
     $size,
     $accent3);
     grid-column: 6/13;
+    grid-row: 1;
 }
 
 .summary {

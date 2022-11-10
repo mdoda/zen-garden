@@ -145,7 +145,7 @@ header {
   grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-column: 1/4;
-  grid-row: 1;
+  grid-row: 1/2;
 }
 
 h1 {
@@ -153,6 +153,7 @@ h1 {
   color: rgb(251, 152, 1);
   font-size: 3em;
   grid-column: 1/6;
+  grid-row: 1;
 }
 
 h2 {
@@ -160,6 +161,7 @@ h2 {
   color: rgb(138, 100, 121);
   font-size: 2em;
   grid-column: 6/13;
+  grid-row: 1;
 }
 
 .summary {
