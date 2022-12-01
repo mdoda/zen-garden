@@ -335,6 +335,53 @@ footer {
   margin-left: -30%;
   padding: 5% 5% 5% 30%;
 }*/
+@media screen and (max-width: 700px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .main {
+    grid-column: 2/5;
+    grid-row: unset;
+  }
+  .intro {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: unset;
+    grid-template-rows: 300px auto auto auto;
+    grid-row: unset;
+    grid-column: 1/2;
+  }
+  header {
+    display: unset;
+    grid-gap: unset;
+    grid-template-columns: unset;
+    grid-column: unset;
+    grid-row: 1;
+  }
+  .sidebar {
+    display: unset;
+    grid-row: unset;
+    grid-column: 1/5;
+    grid-template-columns: unset;
+    object-fit: fill;
+  }
+  .wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: unset;
+  }
+  .summary {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .preamble {
+    grid-column: unset;
+    grid-row: 3/5;
+  }
+}
 /*.intro {
   padding: 5%;
 }*/
