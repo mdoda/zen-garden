@@ -5,6 +5,25 @@ $accent2: #6E3A9E;
 rgb(138,
 100,
 121);*/
+ul {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(54, 143, 130);
+}
+
 html {
   padding: 0%;
 }
@@ -13,7 +32,7 @@ h2,
 h3,
 h4 {
   font-family: "Creepster";
-  color: rgb(25, 138, 131);
+  color: rgb(30, 33, 32);
   font-size: 2em;
 }
 
@@ -24,14 +43,12 @@ p {
 }
 
 body {
-  height: 100vh;
   /* The image used */
   background-image: url("./images/kraken.jpeg");
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 75%;
   animation: thunderHit;
   animation-duration: 0.4s;
   animation-iteration-count: 2;
@@ -127,76 +144,81 @@ body {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 100vh 50vh;
 }
 
 /*Intro*/
 .intro {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 350px));
+  grid-template-rows: 29% 30.5% 40.5%;
   grid-row: 1;
-  grid-column: 1/13;
+  grid-column: 3/11;
 }
 
 header {
   display: grid;
-  grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-column: 1/4;
+  grid-column: 1/13;
   grid-row: 1;
+  margin: auto;
+  width: 100%;
 }
 
 h1 {
   font-family: "Creepster";
   color: rgb(251, 152, 1);
   font-size: 3em;
-  grid-column: 1/6;
+  grid-column: 2/6;
 }
 
 h2 {
   font-family: "Creepster";
   color: rgb(138, 100, 121);
   font-size: 2em;
-  grid-column: 6/13;
+  grid-column: 10/13;
+}
+
+h3 {
+  margin: 0px;
 }
 
 .summary {
-  grid-column: 4/13;
-  grid-row: 1;
+  grid-column: 1/4;
+  grid-row: 3;
 }
 
 .preamble {
   grid-column: 4/13;
-  grid-row: 2;
+  grid-row: 3;
 }
 
 /*Main*/
 .main {
-  grid-column: 4/13;
+  grid-column: 6/11;
   grid-row: 3;
 }
 
 .sidebar {
-  grid-column: 1/4;
+  grid-column: 3/6;
   grid-row: 3;
 }
 
 .wrapper {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, auto));
 }
 
 .design-selection {
-  grid-column: 1/6;
+  grid-column: 1/7;
   grid-row: 1;
 }
 
 .zen-resources {
-  grid-column: 6/13;
+  grid-column: 7/13;
   grid-row: 1;
 }
 
@@ -285,8 +307,10 @@ a:hover {
 */
 .page-wrapper > section > div,
 .page-wrapper > div > div,
-aside > div > div {
+aside > div > div,
+footer {
   background: rgba(128, 128, 128, 0.9);
+  border-radius: 15px;
 }
 
 /*[role="banner"] {
@@ -314,76 +338,22 @@ aside > div > div {
 /*.intro {
   padding: 5%;
 }*/
-/** {
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 html {
-    background-color: $background-color;
-    padding: 5%;
+  background-color: #151818;
+  padding: 0%;
 }
 
 body {
-    font-family: $fonts-body;
-    font-size: 85%;
-    color: $text-dark;
-    background-color: $primary;
-    margin: 0;
-    padding: 1em;
+  font-family: "Special Elite";
+  font-size: 85%;
+  color: #333;
+  background-color: #313131;
+  margin: 0;
+  padding: 1em;
 }
-
-section {
-    background-color: white;
-    padding: 1em;
-    margin: 1em;
-}
-
-.colors {
-    @include atoms.set-flex();
-    >h3 {
-        width: 100%;
-        flex: 1 0 100%;
-    }
-    >figure {
-        margin: 0;
-        flex: 1 1 25%;
-    }
-}
-
-.swatch {
-    width: 100%;
-    height: 100px;
-    border: 1px solid;
-}
-
-.primary {
-    background-color: $primary;
-}
-
-.accent1 {
-    background-color: $accent1;
-}
-
-.accent2 {
-    background-color: $accent2;
-}
-
-.text-dark {
-    background-color: $text-dark;
-}
-
-.element {
-    border: 1px solid;
-    margin: 0.5em;
-    padding: 1em;
-}
-
-.uppercase {
-    @include atoms.uppercase;
-}
-
-.uppercase-light {
-    @include atoms.uppercase($text-light);
-}*/
 
 /*# sourceMappingURL=style.css.map */
