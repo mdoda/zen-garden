@@ -8,7 +8,7 @@ rgb(138,
 ul {
   list-style: none;
   display: inline-block;
-  text-align: center;
+  text-align: left;
 }
 
 nav {
@@ -43,7 +43,6 @@ p {
 }
 
 body {
-  /* The image used */
   background-image: url("./images/kraken.jpeg");
   background-attachment: fixed;
   background-position: top center;
@@ -144,15 +143,14 @@ body {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: 100vh 50vh;
 }
 
 /*Intro*/
 .intro {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: 29% 30.5% 40.5%;
+  grid-template-rows: 45vh 55vh 200px;
   grid-row: 1;
   grid-column: 3/11;
 }
@@ -181,50 +179,61 @@ h2 {
 }
 
 h3 {
-  margin: 0px;
+  margin: 5px;
 }
 
 .summary {
   grid-column: 1/4;
   grid-row: 3;
+  padding: 0px;
 }
 
 .preamble {
   grid-column: 4/13;
   grid-row: 3;
+  padding: 0px;
 }
 
 /*Main*/
 .main {
-  grid-column: 6/11;
-  grid-row: 3;
+  grid-column: 5/11;
+  grid-row: 2;
 }
 
 .sidebar {
-  grid-column: 3/6;
-  grid-row: 3;
+  grid-column: 3/5;
+  grid-row: 2;
 }
 
 .wrapper {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, auto));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .design-selection {
-  grid-column: 1/7;
+  grid-column: 1/13;
   grid-row: 1;
 }
 
 .zen-resources {
-  grid-column: 7/13;
-  grid-row: 1;
+  grid-column: 1/13;
+  grid-row: 2;
 }
 
 .design-archives {
   grid-column: 1/13;
-  grid-row: 2;
+  grid-row: 3;
+}
+
+footer {
+  font-size: 2em;
+  text-align: center;
+}
+
+footer a {
+  padding: 30px;
 }
 
 /*
