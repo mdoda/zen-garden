@@ -2,6 +2,7 @@
 @use 'atoms';
 @use 'molecules';
 @use 'organisms' as o;
+@use 'smallscreen';
 * {
     box-sizing: border-box;
 }
