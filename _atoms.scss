@@ -6,6 +6,13 @@
     font-size: $size;
 }
 
+#zen-preamble{
+    margin-bottom: 0px;
+}
+
+#zen-explanation{
+    margin-top: 0;
+}
 ul {
     list-style: none;
     display: inline-block;
@@ -17,7 +24,7 @@ nav {
 }
 
 a {
-    color: $text-dark;
+    color: rgb(82 12 51);
     text-decoration: none;
 }
 
@@ -190,12 +197,15 @@ h3 {
     grid-column: 1/4;
     grid-row: 3;
     padding: 0px;
+    margin-bottom: 0px;
 }
 
 .preamble {
     grid-column: 4/13;
     grid-row: 3;
     padding: 0px;
+    overflow: auto;
+    
 }
 
 
@@ -234,12 +244,13 @@ h3 {
 }
 
 footer {
-    font-size: $size;
+    font-size: $size - 0.7em;
     text-align: center;
 }
 
 footer a {
     padding: 30px;
+    color: rgb(249, 165, 7);
 }
 
 
