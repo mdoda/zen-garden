@@ -7,11 +7,11 @@
 }
 
 #zen-preamble {
-    margin-bottom: 0px;
+    //margin-bottom: 0px;
 }
 
 #zen-explanation {
-    margin-top: 0;
+    //margin-top: 0;
 }
 
 ul {
@@ -26,7 +26,7 @@ nav {
 }
 
 a {
-    color: $text-dark;
+    color: rgb(82 12 51);
     text-decoration: none;
 }
 
@@ -153,7 +153,7 @@ body {
 
 .page-wrapper {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 4px;
     grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
@@ -162,7 +162,7 @@ body {
 
 .intro {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: 45vh 55vh auto;
     grid-row: 1;
@@ -192,21 +192,14 @@ h2 {
     grid-column: 10/13;
 }
 
-h3 {
-    margin: 5px;
-}
-
 .summary {
     grid-column: 1/4;
     grid-row: 3;
-    padding: 0px;
 }
 
 .preamble {
     grid-column: 4/13;
     grid-row: 3;
-    padding: 0px;
-    overflow: auto;
 }
 
 
@@ -216,43 +209,44 @@ h3 {
     display: grid;
     grid-column: 5/11;
     grid-row: 2;
-    grid-gap: 10px;
+    grid-gap: 4px;
 }
 
 .sidebar {
+    display: grid;
     grid-column: 3/5;
     grid-row: 2;
 }
 
 .wrapper {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 4px;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .design-selection {
-    grid-column: 1/13;
+    grid-column: 1/12;
     grid-row: 1;
 }
 
 .zen-resources {
-    grid-column: 1/13;
+    grid-column: 1/12;
     grid-row: 2;
 }
 
 .design-archives {
-    grid-column: 1/13;
+    grid-column: 1/12;
     grid-row: 3;
 }
 
 footer {
-    font-size: $size;
+    font-size: $size - 0.7em;
     text-align: center;
 }
 
 footer a {
     padding: 30px;
+    color: rgb(249, 165, 7);
 }
 
 
