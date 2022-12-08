@@ -162,7 +162,7 @@ body {
 
 .intro {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 4px;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: 45vh 55vh auto;
     grid-row: 1;
@@ -225,17 +225,17 @@ h2 {
 }
 
 .design-selection {
-    grid-column: 1/12;
+    grid-column: 1/13;
     grid-row: 1;
 }
 
 .zen-resources {
-    grid-column: 1/12;
+    grid-column: 1/13;
     grid-row: 2;
 }
 
 .design-archives {
-    grid-column: 1/12;
+    grid-column: 1/13;
     grid-row: 3;
 }
 
