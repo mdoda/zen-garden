@@ -13,26 +13,3 @@ footer {
     overflow: auto;
 }
 
-
-/*[role="banner"] {
-  > h1 {
-    // notice we have to reference the 'atoms' namespace to find our mixins.
-    @include atoms.uppercase($text-light);
-  }
-}
-.summary {
-  @include atoms.uppercase($text-light);
-  padding: 15% 0;
-  p:last-child {
-    @include atoms.divider;
-  }
-  a {
-    color: $text-light; //in this case the link wants to be light instead of the default dark
-  }
-}
-.preamble {
-  background: rgba(255, 255, 255, 0.9);
-  color: $text-dark;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
-}*/
